@@ -69,7 +69,7 @@ public class UserController extends BaseController {
     @ApiOperation(value="根据用户Id获取用户信息", notes="根据url的userId来获取用户详细信息")
     @ApiImplicitParam(paramType = "path", dataType = "Integer", name = "userId", value = "用户编号", required = true, example = "1")
     @GetMapping(value = "{userId}")
-    public ResultBO addUser(@PathVariable("userId") Integer userId) {
+    public ResultBO getUserById(@PathVariable("userId") Integer userId) {
         UserDO userDO = userService.selectByPrimaryKey(userId);
         JSONObject data = new JSONObject();
         data.put("userId", userDO);
