@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: dev
+  resources:
+    static-locations: classpath:static/,file:static/
+  http:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+mybatis:
+  mapperLocations: classpath:mapper/**/*.xml
+  typeAliasesPackage: com.xld.core.entity
+
+pagehelper:
+  helperDialect: mysql

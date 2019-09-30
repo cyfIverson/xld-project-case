@@ -1,0 +1,5 @@
+rootProject.name = 'xld-project-case'
+include 'common'
+include 'core'
+include 'web'
+include 'timer'
